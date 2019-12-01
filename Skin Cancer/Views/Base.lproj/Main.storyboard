@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Синий Git. OpenVINO Hackathon.-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Skin_Cancer__OpenVINO_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВНИМАНИЕ!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQW-xX-iOx">
+                                <rect key="frame" x="133.5" y="23" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-dK-h0R">
+                                <rect key="frame" x="16" y="61" width="343" height="325"/>
+                                <mutableString key="text">     Это решение позволяет провести первичный скриннинг злокачественных новообразований кожи в домашних условиях.
+ 
+     Данное приложение НЕ ЯВЛЯЕТСЯ заменой врача и НЕ ГАРАНТИРУЕТ точный результат!
+
+     Если приложение определило вашу родинку как "Злокачественную"- незамедлительно обратитесь ко врачу!      Решение сделано в рамках хакатона "OpenVINO Hackathon" 30 ноября - 1 декабря. Нижний Новгород.</mutableString>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyG-uj-mG1">
+                                <rect key="frame" x="74" y="411" width="227" height="70"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="PPY-0o-9mE"/>
+                                    <constraint firstAttribute="height" constant="70" id="ghB-HM-2qB"/>
+                                </constraints>
+                                <state key="normal" title="Определить вид родинки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TgN-am-MYp" kind="show" id="0Wa-ag-INj">
+                                        <segue key="commit" inheritsFrom="parent" id="sa4-6Q-Hky"/>
+                                        <segue key="preview" inheritsFrom="commit" id="1zf-2a-fO2"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed with ❤️ by Синий Git" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yP9-4f-LgK">
+                                <rect key="frame" x="62" y="595" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gR-pB-S0v">
+                                <rect key="frame" x="74" y="498.5" width="227" height="70"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Определить форму рака кожи">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KyG-uj-mG1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="112.5" id="2h9-ZO-4QB"/>
+                            <constraint firstItem="6Q4-dK-h0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wL-zf-23s"/>
+                            <constraint firstItem="tQW-xX-iOx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="31b-j7-OPd"/>
+                            <constraint firstItem="6Q4-dK-h0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="421-n9-wjd"/>
+                            <constraint firstItem="9gR-pB-S0v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="8s9-UP-iER"/>
+                            <constraint firstItem="yP9-4f-LgK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bm2-AA-4TW"/>
+                            <constraint firstItem="tQW-xX-iOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hza-hS-fcO"/>
+                            <constraint firstItem="KyG-uj-mG1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mu0-Sx-GSS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Q4-dK-h0R" secondAttribute="trailing" constant="16" id="Uuu-CO-7g2"/>
+                            <constraint firstItem="9gR-pB-S0v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vo3-ft-Y5N"/>
+                            <constraint firstItem="9gR-pB-S0v" firstAttribute="height" secondItem="KyG-uj-mG1" secondAttribute="height" id="duM-K1-JYD"/>
+                            <constraint firstItem="yP9-4f-LgK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ekh-bA-MjW"/>
+                            <constraint firstItem="yP9-4f-LgK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="272" id="gXS-Fd-bsE"/>
+                            <constraint firstItem="6Q4-dK-h0R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-110" id="lvA-di-AW5"/>
+                            <constraint firstItem="9gR-pB-S0v" firstAttribute="width" secondItem="KyG-uj-mG1" secondAttribute="width" id="zWv-4B-fvR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Синий Git. OpenVINO Hackathon." id="BiZ-iy-fgb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448.8" y="419.64017991004499"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zfw-it-Ga6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M3I-8Z-PSZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4E5-lh-IkL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L2A-MO-6IX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mk7-5K-zgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="439"/>
+        </scene>
+        <!--Realtime Detection-->
+        <scene sceneID="7la-d7-m6M">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="hHk-fV-hfH" customClass="RealtimeDetection" customModule="Skin_Cancer__OpenVINO_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7u6-ok-HKw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i4-np-5mN">
+                                <rect key="frame" x="166.5" y="636" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHm-in-2cd">
+                                <rect key="frame" x="15" y="20" width="50" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressedBackButton:" destination="hHk-fV-hfH" eventType="touchUpInside" id="7RH-EX-FRr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tHm-in-2cd" firstAttribute="top" secondItem="9tW-fB-8ul" secondAttribute="top" constant="20" id="6G5-Kl-8Bo"/>
+                            <constraint firstItem="9tW-fB-8ul" firstAttribute="bottom" secondItem="0i4-np-5mN" secondAttribute="bottom" constant="10" id="9r6-Rt-Ylv"/>
+                            <constraint firstItem="tHm-in-2cd" firstAttribute="leading" secondItem="9tW-fB-8ul" secondAttribute="leading" constant="15" id="NsJ-71-L4e"/>
+                            <constraint firstItem="0i4-np-5mN" firstAttribute="centerX" secondItem="7u6-ok-HKw" secondAttribute="centerX" id="W55-67-mfL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9tW-fB-8ul"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fkm-lq-PS3"/>
+                    <connections>
+                        <outlet property="resNeuro" destination="0i4-np-5mN" id="Vc0-4f-XME"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UL3-Bb-Avg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="1181"/>
+        </scene>
+        <!--Определить форму рака кожи-->
+        <scene sceneID="EHY-Rc-Mtb">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Baw-lJ-Kmk" customClass="TypeRecognition" customModule="Skin_Cancer__OpenVINO_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lne-bc-bOD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9g-wG-dEX">
+                                <rect key="frame" x="10" y="462" width="361" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                <state key="normal" title="Сделать фотографию злокачественной родинки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="camButtonTapped:" destination="Baw-lJ-Kmk" eventType="touchUpInside" id="j2H-I0-RAK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-l9-xDh">
+                                <rect key="frame" x="64" y="500" width="254" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                <state key="normal" title="Выбрать изображение из галереи">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImage:" destination="Baw-lJ-Kmk" eventType="touchUpInside" id="CrQ-dS-WAk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5c-3C-XlX">
+                                <rect key="frame" x="87" y="606" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Вернуться на главный экран">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="JzI-PI-6hd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пример фото" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a60-Ba-sgq">
+                                <rect key="frame" x="20" y="391" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KOe-nC-XvW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a60-Ba-sgq" firstAttribute="top" secondItem="KOe-nC-XvW" secondAttribute="bottom" constant="20" id="B0S-vq-iDn"/>
+                            <constraint firstItem="KOe-nC-XvW" firstAttribute="top" secondItem="A4h-kK-ZEZ" secondAttribute="top" id="CtL-Rz-PvE"/>
+                            <constraint firstItem="A4h-kK-ZEZ" firstAttribute="trailing" secondItem="a60-Ba-sgq" secondAttribute="trailing" constant="20" id="VaO-bI-azi"/>
+                            <constraint firstItem="KOe-nC-XvW" firstAttribute="centerY" secondItem="lne-bc-bOD" secondAttribute="centerY" constant="-148" id="fLb-RI-R5I"/>
+                            <constraint firstItem="KOe-nC-XvW" firstAttribute="trailing" secondItem="A4h-kK-ZEZ" secondAttribute="trailing" id="soi-uR-8ho"/>
+                            <constraint firstItem="KOe-nC-XvW" firstAttribute="leading" secondItem="A4h-kK-ZEZ" secondAttribute="leading" id="tgJ-Ir-Hhn"/>
+                            <constraint firstItem="a60-Ba-sgq" firstAttribute="leading" secondItem="A4h-kK-ZEZ" secondAttribute="leading" constant="20" id="zBH-vB-Zde"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4h-kK-ZEZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Определить форму рака кожи" leftItemsSupplementBackButton="YES" id="W67-6d-Riy">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Vq6-nl-xJ6"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="a60-Ba-sgq" id="N9N-yd-REG"/>
+                        <outlet property="scene" destination="KOe-nC-XvW" id="WZI-YF-wVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vo-DH-Eam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="1595"/>
+        </scene>
+        <!--Определить вид родинки-->
+        <scene sceneID="nti-zM-3Hp">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="TgN-am-MYp" customClass="MainViewController" customModule="Skin_Cancer__OpenVINO_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZu-8P-34B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rTO-c0-ZIf" userLabel="Scene">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="M1N-KQ-xfE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qCm-MS-zpw">
+                                <rect key="frame" x="0.0" y="375" width="375" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24l-FY-DC1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="b4X-GT-YLz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-9n-7KY">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="Сделать фотографию родинки">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="camButtonTapped:" destination="TgN-am-MYp" eventType="touchUpInside" id="yqO-MJ-esK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-Jo-tb2">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="Выбрать изображение из галереи">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickImage:" destination="TgN-am-MYp" eventType="touchUpInside" id="QBD-XM-JoP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ8-dQ-2MO">
+                                <rect key="frame" x="67" y="605" width="241" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="Вернуться на главный экран">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="dOd-Cu-YN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-8f-CkR">
+                                <rect key="frame" x="0.0" y="465" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Реалтайм детекшн">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hHk-fV-hfH" kind="show" id="8xQ-rT-Hsj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Txc-XQ-i6t" firstAttribute="trailing" secondItem="Tbo-8f-CkR" secondAttribute="trailing" id="5jy-zt-FDa"/>
+                            <constraint firstItem="Txc-XQ-i6t" firstAttribute="bottom" secondItem="JJ8-dQ-2MO" secondAttribute="bottom" constant="30" id="BNp-6h-BHi"/>
+                            <constraint firstItem="Txc-XQ-i6t" firstAttribute="trailing" secondItem="qCm-MS-zpw" secondAttribute="trailing" id="Bye-Iz-S8o"/>
+                            <constraint firstItem="rTO-c0-ZIf" firstAttribute="top" secondItem="Txc-XQ-i6t" secondAttribute="top" id="H8V-1e-CWq"/>
+                            <constraint firstItem="Tbo-8f-CkR" firstAttribute="leading" secondItem="Txc-XQ-i6t" secondAttribute="leading" id="J8Q-2f-6mY"/>
+                            <constraint firstItem="JJ8-dQ-2MO" firstAttribute="centerX" secondItem="rZu-8P-34B" secondAttribute="centerX" id="MgS-Yl-m4y"/>
+                            <constraint firstItem="Txc-XQ-i6t" firstAttribute="trailing" secondItem="rTO-c0-ZIf" secondAttribute="trailing" id="Paj-1H-ZWu"/>
+                            <constraint firstItem="qCm-MS-zpw" firstAttribute="top" secondItem="rTO-c0-ZIf" secondAttribute="bottom" constant="25" id="XlL-Es-Ksb"/>
+                            <constraint firstItem="Tbo-8f-CkR" firstAttribute="top" secondItem="qCm-MS-zpw" secondAttribute="bottom" id="je8-ME-eWk"/>
+                            <constraint firstItem="rTO-c0-ZIf" firstAttribute="leading" secondItem="Txc-XQ-i6t" secondAttribute="leading" id="oua-HH-itF"/>
+                            <constraint firstItem="qCm-MS-zpw" firstAttribute="leading" secondItem="Txc-XQ-i6t" secondAttribute="leading" id="rw1-kd-huT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Txc-XQ-i6t"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Определить вид родинки" id="wox-aV-xaT">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="aFH-Go-1vS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="24l-FY-DC1" id="lrW-Ji-jAU"/>
+                        <outlet property="scene" destination="rTO-c0-ZIf" id="d72-Mf-9p1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pz2-5o-6yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="422"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Wa-ag-INj"/>
+        <segue reference="dOd-Cu-YN6"/>
+    </inferredMetricsTieBreakers>
+</document>
